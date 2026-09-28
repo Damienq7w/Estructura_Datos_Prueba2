@@ -1,4 +1,4 @@
-# ExamenED_Grupo4
+# Estructura_Datos_Prueba2
 
 # Sistema de Tablets para Biblioteca Digital — Estructura de Datos (Java)
 
@@ -47,15 +47,19 @@ biblioteca (registra préstamos, devoluciones, mantenimiento y turnos).
 | Integrante | Responsabilidad | Estructura / módulo | Archivos | Rama | Estado de avance |
 | --- | --- | --- | --- | --- | --- |
 | Cunalata Mendoza Damian Alexander | Líder técnico e integración | Menú, integración de estructuras, validaciones y regla de 32 GB | `README.md`, `Main.java`, `servicio/BibliotecaService.java`, `servicio/Validador.java` | `Damian_Cunalata` | En desarrollo |
-| Chalco Tasna Kenneth Mateo | Desarrollo | Lista secuencial (inventario) | `modelo/Tablet.java`, `estructuras/ListaSecuencialTablets.java` | `Mateo-Chalco` | En desarrollo |
-| Silva Camuendo Luis Alexander | Desarrollo | Lista simplemente enlazada (préstamos activos) | `modelo/Prestamo.java`, `estructuras/NodoPrestamo.java`, `estructuras/ListaSimplePrestamos.java` | `Rama-Luis-Silva` | En desarrollo |
+| Chalco Tasna Kenneth Mateo | Desarrollo | Lista secuencial (inventario) | `modelo/Tablet.java`, `estructuras/ListaSecuencialTablets.java` | `Kenneth_Chalco` | En desarrollo |
+| Silva Camuendo Luis Alexander | Desarrollo | Lista simplemente enlazada (préstamos activos) | `modelo/Prestamo.java`, `estructuras/NodoPrestamo.java`, `estructuras/ListaSimplePrestamos.java` | `Luis-Silva` | En desarrollo |
 | Tisalema Guashco Darwin Joel | Desarrollo | Cola (solicitudes) y pila (deshacer) | `modelo/Solicitud.java`, `estructuras/NodoSolicitud.java`, `estructuras/ColaSolicitudes.java`, `estructuras/NodoAccion.java`, `estructuras/PilaDeshacer.java` | `Rama-Joel` | En desarrollo |
 | Tacuri Santillan Mónica Sara | Desarrollo | Lista doblemente enlazada (historial) y lista circular (turnos) | `modelo/Movimiento.java`, `estructuras/NodoHistorial.java`, `estructuras/ListaDobleHistorial.java`, `estructuras/NodoTurno.java`, `estructuras/ListaCircularTurnos.java` | `Sara-Tacuri` | En desarrollo |
-| Camacho Monta Josue Jampier | Documentación | Documento, capturas y evidencia de pruebas | `Documento/Documentacion_Grupo4.pdf`, `Capturas_Ejecucion/` | `rama---Josue` | En desarrollo |
+| Camacho Monta Josue Jampier | Documentación | Documento, capturas y evidencia de pruebas | `Documento/Documentacion_Grupo4.pdf`, `Capturas_Ejecucion/` | `rama-Josue` | En desarrollo |
 
 ## Estructura del proyecto
 
 ```
+Estructura_Datos_Prueba2/
+├── README.md
+└── ExamenED_Grupo4/                 → código fuente del proyecto
+
 ExamenED_Grupo4/
 ├── Main.java                        → menú principal (punto de entrada)
 ├── modelo/
@@ -80,8 +84,7 @@ ExamenED_Grupo4/
 │   └── Validador.java               → validaciones de entrada
 ├── Documento/
 │   └── Documentacion_Grupo4.pdf     → explicación de estructuras, casos de prueba y capturas
-├── Capturas_Ejecucion/              → capturas de la ejecución en Visual Studio Code
-└── README.md
+└── Capturas_Ejecucion/              → capturas de la ejecución en Visual Studio Code
 ```
 
 - `modelo/` guarda los datos del caso real.
@@ -95,10 +98,11 @@ ExamenED_Grupo4/
 
 1. Clonar el repositorio:
    ```bash
-   git clone https://github.com/Damienq7w/ExamenED_Grupo4.git
+   git clone https://github.com/Damienq7w/Estructura_Datos_Prueba2.git
    ```
-2. En Visual Studio Code: **File → Open Folder** y abrir directamente la carpeta `ExamenED_Grupo4`.
-3. En la terminal integrada (`Ctrl + ñ`), desde la carpeta raíz del proyecto:
+2. En Visual Studio Code: **File → Open Folder** y abrir directamente la carpeta `ExamenED_Grupo4`
+   que está dentro del repositorio.
+3. En la terminal integrada (`Ctrl + ñ`), desde la carpeta `ExamenED_Grupo4`:
    ```bash
    javac -d bin Main.java modelo/*.java estructuras/*.java servicio/*.java
    java -cp bin Main
@@ -280,13 +284,13 @@ Las capturas de cada caso están en `Capturas_Ejecucion/` y en `Documento/Docume
 
 1. Cada integrante clona el repositorio y crea su rama:
    ```bash
-   git clone https://github.com/Damienq7w/ExamenED_Grupo4.git
-   cd ExamenED_Grupo4
+   git clone https://github.com/Damienq7w/Estructura_Datos_Prueba2.git
+   cd Estructura_Datos_Prueba2
    git checkout -b nombre-de-su-rama
    ```
 2. Sube sus archivos con commits descriptivos desde **su propia cuenta**:
    ```bash
-   git add modelo/Tablet.java
+   git add ExamenED_Grupo4/modelo/Tablet.java
    git commit -m "Crea clase Tablet"
    git push origin nombre-de-su-rama
    ```
