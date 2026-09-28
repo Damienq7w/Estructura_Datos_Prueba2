@@ -145,7 +145,7 @@ public class BibliotecaService {
     public String devolver(String cedula) {
         Prestamo prestamo = prestamos.eliminar(cedula);
         if (prestamo == null) {
-            return "ERROR: no existe un prestamo activo con la cedula " + cedula + ".";
+            return "ERROR: no existe un prestamo activo con la cedula " + cedula ;
         }
         inventario.modificarEstado(prestamo.getCodigoTablet(), Tablet.DISPONIBLE);
         pila.apilar(prestamo);
