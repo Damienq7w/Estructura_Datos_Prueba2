@@ -46,12 +46,12 @@ biblioteca (registra préstamos, devoluciones, mantenimiento y turnos).
 
 | Integrante | Responsabilidad | Estructura / módulo | Archivos | Rama | Estado de avance |
 | --- | --- | --- | --- | --- | --- |
-| Cunalata Mendoza Damian Alexander | Líder técnico e integración | Menú, integración de estructuras, validaciones y regla de 32 GB | `README.md`, `Main.java`, `servicio/BibliotecaService.java`, `servicio/Validador.java` | `Damian_Cunalata` | En desarrollo |
-| Chalco Tasna Kenneth Mateo | Desarrollo | Lista secuencial (inventario) | `modelo/Tablet.java`, `estructuras/ListaSecuencialTablets.java` | `Kenneth_Chalco` | En desarrollo |
-| Silva Camuendo Luis Alexander | Desarrollo | Lista simplemente enlazada (préstamos activos) | `modelo/Prestamo.java`, `estructuras/NodoPrestamo.java`, `estructuras/ListaSimplePrestamos.java` | `Luis-Silva` | En desarrollo |
-| Tisalema Guashco Darwin Joel | Desarrollo | Cola (solicitudes) y pila (deshacer) | `modelo/Solicitud.java`, `estructuras/NodoSolicitud.java`, `estructuras/ColaSolicitudes.java`, `estructuras/NodoAccion.java`, `estructuras/PilaDeshacer.java` | `Rama-Joel` | En desarrollo |
-| Tacuri Santillan Mónica Sara | Desarrollo | Lista doblemente enlazada (historial) y lista circular (turnos) | `modelo/Movimiento.java`, `estructuras/NodoHistorial.java`, `estructuras/ListaDobleHistorial.java`, `estructuras/NodoTurno.java`, `estructuras/ListaCircularTurnos.java` | `Sara-Tacuri` | En desarrollo |
-| Camacho Monta Josue Jampier | Documentación | Documento, capturas y evidencia de pruebas | `Documento/Documentacion_Grupo4.pdf`, `Capturas_Ejecucion/` | `rama-Josue` | En desarrollo |
+| Cunalata Mendoza Damian Alexander | Líder técnico e integración | Menú, integración de estructuras, validaciones y regla de 32 GB | `README.md`, `Main.java`, `servicio/BibliotecaService.java`, `servicio/Validador.java` | `Damian_Cunalata` | Completado |
+| Chalco Tasna Kenneth Mateo | Desarrollo | Lista secuencial (inventario) | `modelo/Tablet.java`, `estructuras/ListaSecuencialTablets.java` | `Kenneth_Chalco` | Completado |
+| Silva Camuendo Luis Alexander | Desarrollo | Lista simplemente enlazada (préstamos activos) | `modelo/Prestamo.java`, `estructuras/NodoPrestamo.java`, `estructuras/ListaSimplePrestamos.java` | `Luis-Silva` | Completado |
+| Tisalema Guashco Darwin Joel | Desarrollo | Cola (solicitudes) y pila (deshacer) | `modelo/Solicitud.java`, `estructuras/NodoSolicitud.java`, `estructuras/ColaSolicitudes.java`, `estructuras/NodoAccion.java`, `estructuras/PilaDeshacer.java` | `Rama-Joel` | Completado |
+| Tacuri Santillan Mónica Sara | Desarrollo | Lista doblemente enlazada (historial) y lista circular (turnos) | `modelo/Movimiento.java`, `estructuras/NodoHistorial.java`, `estructuras/ListaDobleHistorial.java`, `estructuras/NodoTurno.java`, `estructuras/ListaCircularTurnos.java` | `Sara-Tacuri` | Completado |
+| Camacho Monta Josue Jampier | Documentación | Documento, capturas y evidencia de pruebas | `Documento/Documentacion_Grupo4.pdf`, `Capturas_Ejecucion/` | `rama-Josue` | Completado |
 
 ## Estructura del proyecto
 
