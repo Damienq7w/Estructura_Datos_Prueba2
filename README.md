@@ -284,35 +284,7 @@ Los casos se ejecutan en orden, desde el inicio del programa con los datos de pr
 
 ### Evidencias de ejecución
 
-Capturas tomadas en la terminal integrada de Visual Studio Code, siguiendo los pasos de la tabla anterior.
-
-**Caso 1 — Préstamo exitoso**
-
-![Caso 1](Capturas_Ejecucion/Caso_01_Prestamo.png)
-
-**Caso 2 — Regla de 32 GB**
-
-![Caso 2](Capturas_Ejecucion/Caso_02_Regla32GB.png)
-
-**Caso 3 — Cola FIFO**
-
-![Caso 3](Capturas_Ejecucion/Caso_03_Cola.png)
-
-**Caso 4 — Deshacer devolución**
-
-![Caso 4](Capturas_Ejecucion/Caso_04_Deshacer.png)
-
-**Caso 5 — Historial bidireccional**
-
-![Caso 5](Capturas_Ejecucion/Caso_05_Historial.png)
-
-**Caso 6 — Turnos circulares**
-
-![Caso 6](Capturas_Ejecucion/Caso_06_Turnos.png)
-
-**Caso 7 — Validaciones**
-
-![Caso 7](Capturas_Ejecucion/Caso_07_Validaciones.png)
+Capturas tomadas en la terminal integrada de Visual Studio Code, siguiendo los pasos de la tabla anterior, se encuentran en la seccion Ejecucion y en el Informe.
 
 El informe completo está en [`Informe/Prueba_02_Estructura_Datos.pdf`](Informe/Prueba_02_Estructura_Datos.pdf).
 
