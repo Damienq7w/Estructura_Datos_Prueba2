@@ -51,7 +51,7 @@ biblioteca (registra préstamos, devoluciones, mantenimiento y turnos).
 | Silva Camuendo Luis Alexander | Desarrollo | Lista simplemente enlazada (préstamos activos) | `modelo/Prestamo.java`, `estructuras/NodoPrestamo.java`, `estructuras/ListaSimplePrestamos.java` | `Luis-Silva` | Completado |
 | Tisalema Guashco Darwin Joel | Desarrollo | Cola (solicitudes) y pila (deshacer) | `modelo/Solicitud.java`, `estructuras/NodoSolicitud.java`, `estructuras/ColaSolicitudes.java`, `estructuras/NodoAccion.java`, `estructuras/PilaDeshacer.java` | `Rama-Joel` | Completado |
 | Tacuri Santillan Mónica Sara | Desarrollo | Lista doblemente enlazada (historial) y lista circular (turnos) | `modelo/Movimiento.java`, `estructuras/NodoHistorial.java`, `estructuras/ListaDobleHistorial.java`, `estructuras/NodoTurno.java`, `estructuras/ListaCircularTurnos.java` | `Sara-Tacuri` | Completado |
-| Camacho Monta Josue Jampier | Documentación | Documento, capturas y evidencia de pruebas | `Informe/Prueba_02_Estructura_Datos.pdf`, `Capturas_Ejecucion/` | `rama-Josue` | Completado |
+| Camacho Monta Josue Jampier | Documentación | Documento, capturas y evidencia de pruebas | `Informe/Prueba_02_Estructura_Datos.pdf`, `Ejecucion/` | `rama-Josue` | Completado |
 
 ## Estructura del proyecto
 
@@ -85,7 +85,18 @@ Estructura_Datos_Prueba2/
 │       └── Validador.java               → validaciones de entrada
 ├── Informe/
 │   └── Prueba_02_Estructura_Datos.pdf   → informe: caso, estructuras, casos de prueba y capturas
-├── Capturas_Ejecucion/                  → capturas de la ejecución en Visual Studio Code
+├── Ejecucion/                           → capturas de la ejecución en Visual Studio Code
+│   ├── Ejecucion_Historial.png
+│   ├── Ejecucion_Mantenimiento.png
+│   └── Ejecucion_Turnos_Lectura.png
+├── Evidencia commits/                   → evidencia de los commits de cada integrante
+│   ├── Evidencia_Cunalata_Damian.png
+│   ├── Evidencia_Chalco_Kenneth.jpeg
+│   ├── Evidencia_Silva_Luis.png
+│   ├── Evidencia_Tisalema_Joel.png
+│   ├── Evidencia Sara-Tacuri.png
+│   ├── Evidencia_Camacho_Josue.png
+│   └── Evidencia_GitHub_Grupo4.pdf      → evidencia de trabajo colaborativo en GitHub
 ├── .gitignore
 └── README.md
 ```
@@ -272,21 +283,35 @@ natural: no hay que detectar el final ni reiniciar el recorrido.
 
 Los casos se ejecutan en orden, desde el inicio del programa con los datos de prueba cargados.
 
-| # | Caso | Pasos en el menú | Resultado esperado | Captura |
-| --- | --- | --- | --- | --- |
-| 1 | Préstamo exitoso | `2` → cédula `1111111111` → nombre `Ana Perez` → tipo `1` (Estudiante) | `Prestamo registrado: tablet TAB001 (64 GB) asignada a Ana Perez.` | [Ver](Capturas_Ejecucion/Caso_01_Prestamo.png) |
-| 2 | Regla de 32 GB | `8` → `1` → `TAB003` (a mantenimiento) → `0`. Luego `2` → cédula `2222222222` → `Pedro Ruiz` → tipo `2` (Grupo de investigación) | `REGLA: TAB004 (16 GB) no puede asignarse a grupos de investigacion (minimo 32 GB).` y `Solicitud enviada a la cola (posicion 1).` | [Ver](Capturas_Ejecucion/Caso_02_Regla32GB.png) |
-| 3 | Cola FIFO | `5` → `2` (Pedro aparece en el FRENTE) → `0`. Luego `8` → `2` → `TAB003` → `0`. Luego `5` → `3` | `Solicitud atendida. Prestamo registrado: tablet TAB003 (128 GB) asignada a Pedro Ruiz.` | [Ver](Capturas_Ejecucion/Caso_03_Cola.png) |
-| 4 | Deshacer devolución con usuario equivocado | `3` → cédula `1111111111` (se registra por error la devolución de Ana). Luego `9` | `Devolucion deshecha: el prestamo de Ana Perez con la tablet TAB001 vuelve a estar activo.` En la opción `4` Ana vuelve a aparecer. | [Ver](Capturas_Ejecucion/Caso_04_Deshacer.png) |
-| 5 | Historial bidireccional | `6` → `1` y luego `6` → `2` | Todas las operaciones anteriores (préstamo, cola, mantenimiento, atención, devolución y deshacer) de la más antigua a la más reciente y al revés. | [Ver](Capturas_Ejecucion/Caso_05_Historial.png) |
-| 6 | Turnos circulares | `7` → `1` y agregar `Luis`, `Sara`, `Joel` → `4` → `2` cuatro veces → `3` → `4` | El turno pasa Sara → Joel → **Luis** → Sara (después del último vuelve el primero). Al eliminar a Sara el turno pasa a Joel y la ronda queda `Joel → Luis`. | [Ver](Capturas_Ejecucion/Caso_06_Turnos.png) |
-| 7 | Validaciones | `1` → `5` → `TAB002`; `1` → `4` → `TAB009`; en *Prestar* ingresar la cédula `123`; en el menú escribir letras | `ERROR: no se puede eliminar TAB002 porque esta PRESTADA.` / `ERROR: no existe la tablet TAB009.` / `ERROR: la cedula debe tener exactamente 10 digitos numericos.` / `ERROR: ingrese un numero entre 0 y 9.` | [Ver](Capturas_Ejecucion/Caso_07_Validaciones.png) |
+| # | Caso | Pasos en el menú | Resultado esperado |
+| --- | --- | --- | --- |
+| 1 | Préstamo exitoso | `2` → cédula `1111111111` → nombre `Ana Perez` → tipo `1` (Estudiante) | `Prestamo registrado: tablet TAB001 (64 GB) asignada a Ana Perez.` |
+| 2 | Regla de 32 GB | `8` → `1` → `TAB003` (a mantenimiento) → `0`. Luego `2` → cédula `2222222222` → `Pedro Ruiz` → tipo `2` (Grupo de investigación) | `REGLA: TAB004 (16 GB) no puede asignarse a grupos de investigacion (minimo 32 GB).` y `Solicitud enviada a la cola (posicion 1).` |
+| 3 | Cola FIFO | `5` → `2` (Pedro aparece en el FRENTE) → `0`. Luego `8` → `2` → `TAB003` → `0`. Luego `5` → `3` | `Solicitud atendida. Prestamo registrado: tablet TAB003 (128 GB) asignada a Pedro Ruiz.` |
+| 4 | Deshacer devolución con usuario equivocado | `3` → cédula `1111111111` (se registra por error la devolución de Ana). Luego `9` | `Devolucion deshecha: el prestamo de Ana Perez con la tablet TAB001 vuelve a estar activo.` En la opción `4` Ana vuelve a aparecer. |
+| 5 | Historial bidireccional | `6` → `1` y luego `6` → `2` | Todas las operaciones anteriores (préstamo, cola, mantenimiento, atención, devolución y deshacer) de la más antigua a la más reciente y al revés. |
+| 6 | Turnos circulares | `7` → `1` y agregar `Luis`, `Sara`, `Joel` → `4` → `2` cuatro veces → `3` → `4` | El turno pasa Sara → Joel → **Luis** → Sara (después del último vuelve el primero). Al eliminar a Sara el turno pasa a Joel y la ronda queda `Joel → Luis`. |
+| 7 | Validaciones | `1` → `5` → `TAB002`; `1` → `4` → `TAB009`; en *Prestar* ingresar la cédula `123`; en el menú escribir letras | `ERROR: no se puede eliminar TAB002 porque esta PRESTADA.` / `ERROR: no existe la tablet TAB009.` / `ERROR: la cedula debe tener exactamente 10 digitos numericos.` / `ERROR: ingrese un numero entre 0 y 9.` |
 
 ### Evidencias de ejecución
 
-Capturas tomadas en la terminal integrada de Visual Studio Code, siguiendo los pasos de la tabla anterior, se encuentran en la seccion Ejecucion y en el Informe.
+Capturas tomadas en la terminal integrada de Visual Studio Code. Están en la carpeta
+[`Ejecucion/`](Ejecucion/) y en el informe.
 
-El informe completo está en [`Informe/Prueba_02_Estructura_Datos.pdf`](Informe/Prueba_02_Estructura_Datos.pdf).
+**Historial (lista doblemente enlazada)**
+
+![Ejecución del historial](Ejecucion/Ejecucion_Historial.png)
+
+**Mantenimiento de tablets**
+
+![Ejecución del mantenimiento](Ejecucion/Ejecucion_Mantenimiento.png)
+
+**Turnos de lectura (lista circular)**
+
+![Ejecución de los turnos de lectura](Ejecucion/Ejecucion_Turnos_Lectura.png)
+
+El informe completo, con los casos de prueba y sus capturas, está en
+[`Informe/Prueba_02_Estructura_Datos.pdf`](Informe/Prueba_02_Estructura_Datos.pdf).
 
 ## Evidencia de colaboración
 
@@ -310,21 +335,44 @@ El informe completo está en [`Informe/Prueba_02_Estructura_Datos.pdf`](Informe/
 
 ### Commits de cada integrante
 
-Commits registrados en el repositorio (sin contar los *merge* de Pull Requests):
+Commits principales de cada integrante (sin contar los *merge*):
 
-| Integrante | Usuario | Rama | Commits |
-| --- | --- | --- | --- |
-| Damian Cunalata | `Damienq7w` | `Damian_Cunalata` / `main` | `Creacion de la estructura del repo` · `Creacion del packaget service y la clase Main` · `Update project name and member responsibilities` · `Update project responsibilities to 'Completado'` · `Creacion de .vscode para que arranque el programa en Main` · `Update README.md` |
-| Kenneth Chalco | `KEN3DYY` | `Kenneth_Chalco` | `Primer avance` · `Primera corrección` · `Correcciones finales` · `Correccion` |
-| Luis Silva | `luuissilva` | `Luis-Silva` | `Creación de clases Prestamo y NodoPrestamo` · `Agrega busqueda por cedula y eliminación de prestamo en lista simple` · `Nuevos comentarios agregados ListaSimplePrestamos` |
-| Joel Tisalema | `Joel03032007` | `Rama-Joel` | `Crear solicitud, Nodo Solicitud` · `Crear solicitud y Nodo Solicitud` · `Implementacion de colaSolicitudes` · `Nodo Accion y Pila deshacer` |
-| Mónica Tacuri | `tacurisantillanmonicasara-dot` | `Sara-Tacuri` | `Create Movimiento.java` · `Implementa historial con lista doble` · `Implemente la lista circular de turnos de lectura` · `Implemente Nodo Turno` |
-| Josue Jampier Camacho | `jampiercamacho94-cloud` | `rama-Josue` | `Presentación del informe realizado` · `Agrega capturas de casos de prueba 1 al 4` · `Agrega capturas de casos de prueba 5 al 7` |
+| Integrante | Usuario | Rama | Commits principales | Evidencia |
+| --- | --- | --- | --- | --- |
+| Damian Cunalata | `Damienq7w` | `Damian_Cunalata` / `main` | [`6517f40`](https://github.com/Damienq7w/Estructura_Datos_Prueba2/commit/6517f40) Main, BibliotecaService y Validador · [`e900a41`](https://github.com/Damienq7w/Estructura_Datos_Prueba2/commit/e900a41) README · [`d7d5305`](https://github.com/Damienq7w/Estructura_Datos_Prueba2/commit/d7d5305) configuración `.vscode` · [`4e7a801`](https://github.com/Damienq7w/Estructura_Datos_Prueba2/commit/4e7a801) evidencia GitHub del grupo | [Ver](Evidencia%20commits/Evidencia_Cunalata_Damian.png) |
+| Kenneth Chalco | `KEN3DYY` | `Kenneth_Chalco` | [`83a4ab3`](https://github.com/Damienq7w/Estructura_Datos_Prueba2/commit/83a4ab3) Tablet y ListaSecuencialTablets · [`8cc92f2`](https://github.com/Damienq7w/Estructura_Datos_Prueba2/commit/8cc92f2) documentación y regla de 32 GB · [`3fb7aa8`](https://github.com/Damienq7w/Estructura_Datos_Prueba2/commit/3fb7aa8) integración en `ExamenED_Grupo4/` | [Ver](Evidencia%20commits/Evidencia_Chalco_Kenneth.jpeg) |
+| Luis Silva | `luuissilva` | `Luis-Silva` | [`6099350`](https://github.com/Damienq7w/Estructura_Datos_Prueba2/commit/6099350) Prestamo y NodoPrestamo · [`d4799be`](https://github.com/Damienq7w/Estructura_Datos_Prueba2/commit/d4799be) ListaSimplePrestamos · [`109fc55`](https://github.com/Damienq7w/Estructura_Datos_Prueba2/commit/109fc55) comentarios de la lista simple | [Ver](Evidencia%20commits/Evidencia_Silva_Luis.png) |
+| Joel Tisalema | `Joel03032007` | `Rama-Joel` | [`f5f6126`](https://github.com/Damienq7w/Estructura_Datos_Prueba2/commit/f5f6126) Solicitud y NodoSolicitud · [`2248e12`](https://github.com/Damienq7w/Estructura_Datos_Prueba2/commit/2248e12) ColaSolicitudes · [`2639864`](https://github.com/Damienq7w/Estructura_Datos_Prueba2/commit/2639864) NodoAccion y PilaDeshacer | [Ver](Evidencia%20commits/Evidencia_Tisalema_Joel.png) |
+| Mónica Tacuri | `tacurisantillanmonicasara-dot` | `Sara-Tacuri` | [`8913653`](https://github.com/Damienq7w/Estructura_Datos_Prueba2/commit/8913653) Movimiento · [`d1760c1`](https://github.com/Damienq7w/Estructura_Datos_Prueba2/commit/d1760c1) ListaDobleHistorial · [`1f5d51b`](https://github.com/Damienq7w/Estructura_Datos_Prueba2/commit/1f5d51b) ListaCircularTurnos · [`bc4a55b`](https://github.com/Damienq7w/Estructura_Datos_Prueba2/commit/bc4a55b) NodoTurno | [Ver](Evidencia%20commits/Evidencia%20Sara-Tacuri.png) |
+| Josue Jampier Camacho | `jampiercamacho94-cloud` | `rama-Josue` | [`cf5fe6a`](https://github.com/Damienq7w/Estructura_Datos_Prueba2/commit/cf5fe6a) informe de la prueba · [`df79fa7`](https://github.com/Damienq7w/Estructura_Datos_Prueba2/commit/df79fa7) capturas de ejecución · [`47a57cc`](https://github.com/Damienq7w/Estructura_Datos_Prueba2/commit/47a57cc) evidencia de commits | [Ver](Evidencia%20commits/Evidencia_Camacho_Josue.png) |
 
-Cada rama se integró a `main` mediante Pull Request (#1 a #7). El historial completo se puede
-verificar en la pestaña **Commits** y en **Insights → Contributors** del repositorio.
+El historial completo se puede verificar en la pestaña [**Commits**](https://github.com/Damienq7w/Estructura_Datos_Prueba2/commits/main) del
+repositorio. La evidencia de trabajo colaborativo está en
+[`Evidencia commits/Evidencia_GitHub_Grupo4.pdf`](Evidencia%20commits/Evidencia_GitHub_Grupo4.pdf).
 
-![Contribuidores del repositorio](Capturas_Ejecucion/Evidencia_Contributors.png)
+### Pull Requests
+
+Cada rama se integró a `main` mediante Pull Request. El repositorio registra 9 Pull Requests
+cerrados:
+
+| PR | Título | Rama | Creado por | Integrado por |
+| --- | --- | --- | --- | --- |
+| [#1](https://github.com/Damienq7w/Estructura_Datos_Prueba2/pull/1) | Crear solicitud y Nodo Solicitud | `Rama-Joel` | Joel Tisalema | Damian Cunalata |
+| [#2](https://github.com/Damienq7w/Estructura_Datos_Prueba2/pull/2) | De main a Sara | `main` → `Sara-Tacuri` | Damian Cunalata | Damian Cunalata |
+| [#3](https://github.com/Damienq7w/Estructura_Datos_Prueba2/pull/3) | Kenneth chalco | `Kenneth_Chalco` | Damian Cunalata | Damian Cunalata |
+| [#4](https://github.com/Damienq7w/Estructura_Datos_Prueba2/pull/4) | Luis silva | `Luis-Silva` | Damian Cunalata | Damian Cunalata |
+| [#5](https://github.com/Damienq7w/Estructura_Datos_Prueba2/pull/5) | Rama joel | `Rama-Joel` | Damian Cunalata | Damian Cunalata |
+| [#6](https://github.com/Damienq7w/Estructura_Datos_Prueba2/pull/6) | Sara tacuri | `Sara-Tacuri` | Damian Cunalata | Damian Cunalata |
+| [#7](https://github.com/Damienq7w/Estructura_Datos_Prueba2/pull/7) | Nuevos comentarios agregados ListaSimplePrestamos | `Luis-Silva` | Damian Cunalata | Damian Cunalata |
+| [#8](https://github.com/Damienq7w/Estructura_Datos_Prueba2/pull/8) | Presentación del informe realizado | `rama-Josue` | Damian Cunalata | Damian Cunalata |
+| [#9](https://github.com/Damienq7w/Estructura_Datos_Prueba2/pull/9) | Ejecucción de algunas funciones del programa | `rama-Josue` | Josue Jampier Camacho | Josue Jampier Camacho |
+
+### Issue
+
+[#10 — Reparto de tareas del Grupo 4 por estructura](https://github.com/Damienq7w/Estructura_Datos_Prueba2/issues/10): checklist con el módulo
+asignado a cada integrante. Asignada a Damian Cunalata y cerrada al confirmar que todas las
+estructuras quedaron integradas en `main`, que el proyecto compila y que los casos de prueba
+funcionan.
 
 ### Aporte individual
 
@@ -335,7 +383,7 @@ verificar en la pestaña **Commits** y en **Insights → Contributors** del repo
 | Luis Silva | Desarrolló la clase `Prestamo` y la lista simplemente enlazada de préstamos activos, con inserción, búsqueda por cédula, eliminación y recorrido. |
 | Joel Tisalema | Desarrolló la clase `Solicitud`, la cola FIFO de solicitudes en espera y la pila LIFO para deshacer la última devolución. |
 | Mónica Tacuri | Desarrolló la clase `Movimiento`, la lista doblemente enlazada del historial con recorrido en ambos sentidos y la lista circular de turnos de lectura. |
-| Josue Jampier Camacho | Elaboró el informe de la prueba (`Informe/Prueba_02_Estructura_Datos.pdf`), tomó las capturas de ejecución en Visual Studio Code y documentó los casos de prueba. |
+| Josue Jampier Camacho | Elaboró el informe de la prueba (`Informe/Prueba_02_Estructura_Datos.pdf`), tomó las capturas de ejecución en Visual Studio Code (`Ejecucion/`) y documentó los casos de prueba. |
 
 ## Restricciones respetadas
 
