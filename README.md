@@ -58,32 +58,30 @@ biblioteca (registra préstamos, devoluciones, mantenimiento y turnos).
 ```
 Estructura_Datos_Prueba2/
 ├── README.md
-└── ExamenED_Grupo4/                 → código fuente del proyecto
-
-ExamenED_Grupo4/
-├── Main.java                        → menú principal (punto de entrada)
-├── modelo/
-│   ├── Tablet.java                  → código, marca, almacenamiento, versión del sistema y estado
-│   ├── Prestamo.java                → cédula, nombre, tipo de usuario y código de tablet
-│   ├── Solicitud.java               → solicitud en espera
-│   └── Movimiento.java              → registro del historial (tipo, descripción, fecha y hora)
-├── estructuras/
-│   ├── ListaSecuencialTablets.java  → inventario (arreglo)
-│   ├── NodoPrestamo.java
-│   ├── ListaSimplePrestamos.java    → préstamos activos
-│   ├── NodoSolicitud.java
-│   ├── ColaSolicitudes.java         → solicitudes en espera
-│   ├── NodoAccion.java
-│   ├── PilaDeshacer.java            → deshacer la última devolución
-│   ├── NodoHistorial.java
-│   ├── ListaDobleHistorial.java     → historial de movimientos
-│   ├── NodoTurno.java
-│   └── ListaCircularTurnos.java     → turnos de lectura
-├── servicio/
-│   ├── BibliotecaService.java       → integra las estructuras y aplica las reglas del negocio
-│   └── Validador.java               → validaciones de entrada
-├── Documento/
-│   └── Documentacion_Grupo4.pdf     → explicación de estructuras, casos de prueba y capturas
+├── ExamenED_Grupo4/                 → código fuente del proyecto
+   ├── Main.java                        → menú principal (punto de entrada)
+   ├── modelo/
+   │   ├── Tablet.java                  → código, marca, almacenamiento, versión del sistema y estado
+   │   ├── Prestamo.java                → cédula, nombre, tipo de usuario y código de tablet
+   │   ├── Solicitud.java               → solicitud en espera
+   │   └── Movimiento.java              → registro del historial (tipo, descripción, fecha y hora)
+   ├── estructuras/
+   │   ├── ListaSecuencialTablets.java  → inventario (arreglo)
+   │   ├── NodoPrestamo.java
+   │   ├── ListaSimplePrestamos.java    → préstamos activos
+   │   ├── NodoSolicitud.java
+   │   ├── ColaSolicitudes.java         → solicitudes en espera
+   │   ├── NodoAccion.java
+   │   ├── PilaDeshacer.java            → deshacer la última devolución
+   │   ├── NodoHistorial.java
+   │   ├── ListaDobleHistorial.java     → historial de movimientos
+   │   ├── NodoTurno.java
+   │   └── ListaCircularTurnos.java     → turnos de lectura
+   ├── servicio/
+   │   ├── BibliotecaService.java       → integra las estructuras y aplica las reglas del negocio
+   │   └── Validador.java               → validaciones de entrada
+   ├── Documento/
+   │   └── Documentacion_Grupo4.pdf     → explicación de estructuras, casos de prueba y capturas
 └── Capturas_Ejecucion/              → capturas de la ejecución en Visual Studio Code
 ```
 
