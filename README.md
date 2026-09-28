@@ -80,8 +80,8 @@ Estructura_Datos_Prueba2/
    ├── servicio/
    │   ├── BibliotecaService.java       → integra las estructuras y aplica las reglas del negocio
    │   └── Validador.java               → validaciones de entrada
-   ├── Documento/
-   │   └── Documentacion_Grupo4.pdf     → explicación de estructuras, casos de prueba y capturas
+├── Documento/
+│   └── Documentacion_Grupo4.pdf     → explicación de estructuras, casos de prueba y capturas
 └── Capturas_Ejecucion/              → capturas de la ejecución en Visual Studio Code
 ```
 
