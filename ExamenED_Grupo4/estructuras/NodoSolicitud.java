@@ -4,6 +4,8 @@ import modelo.Solicitud;
 
 /**
  * Nodo de la cola de solicitudes.
+
+ * Responsable: Tisalema Guashco Darwin Joel
  */
 public class NodoSolicitud {
 

@@ -2,6 +2,7 @@ package modelo;
 
 /**
  * Solicitud de tablet que queda en espera cuando no hay tablets disponibles.
+ * Responsable: Tisalema Guashco Darwin Joel
  */
 public class Solicitud {
 
