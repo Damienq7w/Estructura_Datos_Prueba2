@@ -3,7 +3,7 @@ package estructuras;
 import modelo.Prestamo;
 
 /**
- * Lista simplemente enlazada de prestamos activos asociados a cedula.
+ * Gestiona una lista simplemente enlazada de prestamos activos asociados a cedula.
  * Responsable: Silva Camuendo Luis Alexander
  */
 public class ListaSimplePrestamos {
@@ -24,7 +24,7 @@ public class ListaSimplePrestamos {
         return tamanio;
     }
 
-    /** Inserta al final: recorre hasta el ultimo nodo y engancha el nuevo. O(n). */
+    /** Agrega un nuevo prestamo al final de la lista: recorre hasta el ultimo nodo y engancha el nuevo. O(n). */
     public void insertar(Prestamo prestamo) {
         NodoPrestamo nuevo = new NodoPrestamo(prestamo);
         if (cabeza == null) {
@@ -39,7 +39,7 @@ public class ListaSimplePrestamos {
         tamanio++;
     }
 
-    /** Busca el prestamo activo de una cedula. O(n). */
+    /** Recorre la lista para encontrar un prestamo mediante el numero de cedula. O(n). */
     public Prestamo buscar(String cedula) {
         NodoPrestamo actual = cabeza;
         while (actual != null) {
@@ -56,7 +56,7 @@ public class ListaSimplePrestamos {
     }
 
     /**
-     * Elimina el prestamo de una cedula y lo devuelve (se necesita para la pila).
+     * Busca y elimina el prestamo de una cedula y lo devuelve (se necesita para la pila).
      * Casos: lista vacia, el nodo es la cabeza, el nodo esta en medio o al final. O(n).
      */
     public Prestamo eliminar(String cedula) {
